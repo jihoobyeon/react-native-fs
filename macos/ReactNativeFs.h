@@ -12,7 +12,7 @@
 
 typedef void (^CompletionHandler)(void);
 
-@interface RNFSManager : RCTEventEmitter <RCTBridgeModule>
+@interface ReactNativeFs : RCTEventEmitter <RCTBridgeModule>
 
 +(void)setCompletionHandlerForIdentifier: (NSString *)identifier completionHandler: (CompletionHandler)completionHandler;
 
