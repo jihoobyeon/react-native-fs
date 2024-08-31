@@ -963,22 +963,22 @@ RCT_EXPORT_METHOD(touch:(NSString*)filepath
   return [paths firstObject];
 }
 
-- (NSDictionary *)constantsToExport
+- (NSDictionary *)getConstants
 {
   return @{
-           @"RNFSMainBundlePath": [[NSBundle mainBundle] bundlePath],
-           @"RNFSCachesDirectoryPath": [self getPathForDirectory:NSCachesDirectory],
-           @"RNFSDocumentDirectoryPath": [self getPathForDirectory:NSDocumentDirectory],
-           @"RNFSExternalDirectoryPath": [NSNull null],
-           @"RNFSExternalStorageDirectoryPath": [NSNull null],
-           @"RNFSTemporaryDirectoryPath": NSTemporaryDirectory(),
-           @"RNFSLibraryDirectoryPath": [self getPathForDirectory:NSLibraryDirectory],
-           @"RNFSFileTypeRegular": NSFileTypeRegular,
-           @"RNFSFileTypeDirectory": NSFileTypeDirectory,
-           @"RNFSFileProtectionComplete": NSFileProtectionComplete,
-           @"RNFSFileProtectionCompleteUnlessOpen": NSFileProtectionCompleteUnlessOpen,
-           @"RNFSFileProtectionCompleteUntilFirstUserAuthentication": NSFileProtectionCompleteUntilFirstUserAuthentication,
-           @"RNFSFileProtectionNone": NSFileProtectionNone
+           @"MainBundlePath": [[NSBundle mainBundle] bundlePath],
+           @"CachesDirectoryPath": [self getPathForDirectory:NSCachesDirectory],
+           @"DocumentDirectoryPath": [self getPathForDirectory:NSDocumentDirectory],
+           @"ExternalDirectoryPath": [NSNull null],
+           @"ExternalStorageDirectoryPath": [NSNull null],
+           @"TemporaryDirectoryPath": NSTemporaryDirectory(),
+           @"LibraryDirectoryPath": [self getPathForDirectory:NSLibraryDirectory],
+           @"FileTypeRegular": NSFileTypeRegular,
+           @"FileTypeDirectory": NSFileTypeDirectory,
+           @"FileProtectionComplete": NSFileProtectionComplete,
+           @"FileProtectionCompleteUnlessOpen": NSFileProtectionCompleteUnlessOpen,
+           @"FileProtectionCompleteUntilFirstUserAuthentication": NSFileProtectionCompleteUntilFirstUserAuthentication,
+           @"FileProtectionNone": NSFileProtectionNone
           };
 }
 
